@@ -1,4 +1,4 @@
-name: Swift
+name: xcodebuild
 
 on: [push]
 
@@ -6,8 +6,19 @@ jobs:
   build:
 
     runs-on: macOS-latest
-
+    
     steps:
-    - uses: actions/checkout@v1
-    - name: xcodebuild
-      run: xcodebuild clean test -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11 Pro"
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: CocoaPod Install
+        run: pod install
+      
+      #- name: Testing....display available Xcodes on the Server
+      #  run: ls /Applications | grep Xcode
+      
+      - name: Force xcode 11 
+        run: sudo xcode-select -switch /Applications/Xcode_11.1.app
+
+      - name: iOS build
+        #run: xcodebuild NotSure -scheme NotSure -workspace NotSure.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1'
+        run: xcodebuild clean test -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11 Pro"
