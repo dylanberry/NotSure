@@ -27,6 +27,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "208DCE83D74F0B3C7610CDA6"
+               BuildableName = "NotSureTests.xctest"
+               BlueprintName = "NotSureTests"
+               ReferencedContainer = "container:NotSure.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -56,6 +66,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "208DC716F2EB8AF23D9CDBBE"
+            BuildableName = "NotSure.app"
+            BlueprintName = "NotSure"
+            ReferencedContainer = "container:NotSure.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
