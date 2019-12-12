@@ -1,0 +1,13 @@
+name: Swift
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: xcodebuild
+      run: xcodebuild clean test -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11 Pro"
