@@ -17,11 +17,11 @@ jobs:
       #- name: Testing....display available Xcodes on the Server
       #  run: ls /Applications | grep Xcode
       
-      - name: Force xcode 11 
-        run: sudo xcode-select -switch /Applications/Xcode_11.1.app
+      #- name: Force xcode 11 
+      #  run: sudo xcode-select -switch /Applications/Xcode_11.1.app
       
       - name: List available devices
         run: instruments -s devices
 
       - name: iOS build
-        run: xcodebuild -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=Generic iOS Simulator Device"
+        run: xcodebuild clean test -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11 Pro"
