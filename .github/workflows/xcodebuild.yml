@@ -24,4 +24,4 @@ jobs:
         run: instruments -s devices
 
       - name: iOS build
-        run: xcodebuild -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11,OS=13.1"
+        run: xcodebuild -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=Generic iOS Simulator Device"
