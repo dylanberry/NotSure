@@ -19,7 +19,9 @@ jobs:
       
       - name: Force xcode 11 
         run: sudo xcode-select -switch /Applications/Xcode_11.1.app
+      
+      - name: List available devices
+        run: instruments -s devices
 
-      - name: iOS build
-        #run: xcodebuild NotSure -scheme NotSure -workspace NotSure.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.1'
-        run: xcodebuild -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11 Pro"
+      #- name: iOS build
+      #  run: xcodebuild -project NotSure.xcodeproj -scheme NotSure -destination "platform=iOS Simulator,name=iPhone 11 Pro"
