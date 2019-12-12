@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - name: CocoaPod Install
-        run: pod install
+        
+      #- name: CocoaPod Install
+      #  run: pod install
       
       #- name: Testing....display available Xcodes on the Server
       #  run: ls /Applications | grep Xcode
